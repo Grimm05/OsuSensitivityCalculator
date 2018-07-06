@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+				<div class="header"><h2>Osu! Sensitivity Calculator for Mouse</h2></div>
+		<div class="container">
+				<div class="row">
+						<div class="input-group">
+							<span class="input-group-addon" for="ppi">DPI</span>
+							<input id="ppi" type="text" value="800" class="form-control">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" for="textInput">Windows Sensitivity</span>
+							<input id="textInput" type="number" value="10" class="form-control">
+							<input type="range" value="10" min="1" class="form-control custom-range"  max="20" id="winsens" step="1" value="10" onchange="updateTextInput(this.value);">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Osu! Sensitivity Multiplier</span>
+							<input id="osusens" type="text" value="1" class="form-control">
+						</div>
+				</div>
+				<div class="row">
+					<p>
+						<label for="width">Height :</label>
+						<input id="width" value="1920">
+					</p>
+					<p>
+						<label for="height">Height :</label>
+						<input id="height" value="1080">
+					</p>
+					<div id="results">
+						<div>
+							<label for="result">Effective PPI :</label>
+							 <span id='result'></span>
+						</div>
+						<div>
+							<label for="playres">Playarea resolution :</label>
+							 <span id='playres'></span>
+						</div>
+						<div>
+							<label for="playarea">Playarea :</label>
+							 <span id='playarea'></span>
+						</div>
+						<div>
+							<label for="playareacm">Playarea (cm) :</label>
+							 <span id='playareacm'></span>
+						</div>
+					</div><br>
+				</div>
+			</form>
+		</div>
+	
+	</body>
+</html>
